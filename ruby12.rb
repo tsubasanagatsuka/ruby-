@@ -211,6 +211,7 @@ Fruit.fresh
 apple.introduce
 orange.introduce
 strawberry.introduce
+
 解説は以上になります。
 
 193行目のself.freshはselfをつけることによってクラスメソッドとして定義。
