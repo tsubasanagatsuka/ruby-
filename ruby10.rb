@@ -21,15 +21,7 @@ fruits_price.each do |fruit|
 end
 
 模範解答
-1
-2
-3
-4
-5
-6
-7
-8
-9
+
 fruits_price = [["apple", [200, 250, 220]], ["orange", [100, 120, 80]], ["melon", [1200, 1500]]]
 
 fruits_price.each do |fruit|
