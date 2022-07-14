@@ -58,3 +58,44 @@ sleep_in(true, true)
 #   puts "OK" #7時から20時までの間に鳴けばOK
 # end
 # end
+
+模範解答
+
+
+def sleep_in(is_weekday, is_vacation)
+ if (is_weekday != true) || (is_vacation == true)
+  #!=なのでis_weekdayがtrueであった場合　falseを返す　
+  # 例：(is_weekday != true) = false
+  #sleep_in(false)
+  #になる 
+  puts true
+ else
+   puts false
+ end
+end
+
+# 呼び出し例
+sleep_in(false, false)
+解説
+今回は、第一引数、第二引数にそれぞれtrueもしくはfalseを渡すメソッドを作ることを想定します。
+
+第一引数には、ある日が「平日である」場合はtrue、「平日ではない」場合はfalseを渡します。
+第二引数には、ある日が「休暇である」場合はtrue、「休暇ではない」場合はfalseを渡します。
+
+この2つの引数から「平日ではない」もしくは「平日だが休暇である」場合はtrue、「平日であり、休暇でもない」場合はfalseを返すメソッドを作成します。
+条件分岐を実装するために、if文を使用します。
+
+要件から、第一引数がfalseつまり「平日ではない」場合は、trueを返します。「〜ではない」場合にtrueを返すために、今回は否定の演算子!=を使用します。
+
+2
+(is_weekday != true) 
+A != Bは「AとBが等しくないとき」にtrueを返します。
+したがって、is_weekday != trueと記述することで「平日ではない」場合にtrue を返すことができます。
+また、is_weekday == falseと記述しても同等の意味となります。
+
+条件式の「平日かどうかまたは休暇かどうか」の「または」を定義するためには、演算子||を使用し下記のように記述します。
+
+2
+(is_weekday != true) || (is_vacation == true)
+「平日であり、休暇でもない」場合は、elseを使用しシンプルに記述しましょう。
+
