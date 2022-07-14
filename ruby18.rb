@@ -22,16 +22,19 @@
 # #=> false
 
 def count_evens(nums)
-  count = 0
+  hoge = 0
   nums.each do |num|
     if num.even? #数が偶数かどうか判断
-      count += 1 #+1にすることによって0から始めるのではなく1から数えるようにする(問題文に合わせるため)
+      hoge += 1 #配列に偶数があればその数だけ+1する
     end
   end
-  puts count
+  puts hoge # 変数名はなんでも良い
 end
 
 count_evens([2, 1, 2, 3, 4])
+
+# += プラスしていく　＊＝　かけていく　/= 割っていく　-= 引いていく
+代入演算子
 
 偶数の数を入れておく変数countを用意
 eachメソッドで配列の中を1つずつ取り出してeven?メソッドで偶数か判定
